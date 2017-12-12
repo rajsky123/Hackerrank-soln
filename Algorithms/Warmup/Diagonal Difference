@@ -10,9 +10,6 @@ for a_i in range(n):
     a.append(a_t)
 sum=sum1=0
 for i in range(n):
-    for j in range(n):
-        if(i==j):
-            sum+=a[i][j]
-        if(i+j==n-1):
-            sum1+=a[i][j]
-print(abs(sum-sum1))
+    sum+=a[i][i]
+    sum1+=a[-i-1][i]
+print(abs(sum-sum1)) 
