@@ -1,0 +1,11 @@
+import re
+text=input()
+a=re.split(r'(:|A|P)',text)
+aa=a[5]
+if(aa.find('P')!=-1 and int(a[0])!=12):
+    print(str((int(a[0])+12))+":"+a[2]+":"+a[4])
+elif(aa.find('A')!=-1 and int(a[0])==12 ):
+    print("00"+":"+a[2]+":"+a[4])
+else:
+    print(a[0]+":"+a[2]+":"+a[4])
+
