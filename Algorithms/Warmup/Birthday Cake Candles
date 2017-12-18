@@ -1,0 +1,3 @@
+n=input()
+a=list(map(int,input().split()))
+print(a.count(max(a)))
