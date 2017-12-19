@@ -1,3 +1,7 @@
+#!/bin/python3
+
+import sys
+
 a = map(int,input().split())
 a = sorted(a)
 print(sum(a[:4]),sum(a[-4:]))
