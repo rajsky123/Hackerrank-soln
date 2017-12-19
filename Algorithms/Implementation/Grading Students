@@ -1,0 +1,14 @@
+#!/bin/python3
+
+import sys
+
+n=int(input())
+for j in range(n):
+    i = int(input())
+    rem=i%5
+    if(i>=38 and 5-rem<3):
+        print(i+5-rem)
+    else:
+        print(i)
+
+
