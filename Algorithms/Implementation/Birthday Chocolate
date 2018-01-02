@@ -1,0 +1,12 @@
+#!/bin/python3
+
+import sys
+
+n=int(input())
+a=list(map(int,input().split()))
+d,m=map(int,input().split())
+cnt1=0
+for i in range(n-m+1):
+   if(sum(a[i:i+m])==d):
+       cnt1+=1
+print(cnt1)
