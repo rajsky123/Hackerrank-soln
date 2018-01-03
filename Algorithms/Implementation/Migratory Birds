@@ -5,6 +5,5 @@ import sys
 from  collections import Counter
 n=int(input())
 a=list(map(int,input().split()))
-cnt=Counter(a)
 d={k : v for k,v in filter(lambda t:t[1]==max(Counter(a).values()),Counter(a).items())}
 print(min(d))
