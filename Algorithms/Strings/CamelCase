@@ -1,0 +1,10 @@
+#!/bin/python3
+
+import sys
+
+s=input()
+cnt=1
+for i in s:
+    if(i.upper()==i):
+        cnt+=1
+print(cnt)
