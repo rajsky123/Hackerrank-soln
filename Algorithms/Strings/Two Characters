@@ -1,0 +1,17 @@
+#!/bin/python3
+
+import sys
+
+from itertools import combinations
+n=input()
+s=input()
+ll=set(s)
+max_len = 0
+def meet_pattern(s):
+    return all(s[i-1] != s[i] for i in range(1,len(s)))
+for pair in combinations(ll,2):
+    substr = "".join(i for i in s if i in pair)
+
+    if meet_pattern(substr):
+        max_len = max(max_len, len(substr))
+print(max_len)
