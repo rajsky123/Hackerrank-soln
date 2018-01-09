@@ -1,0 +1,25 @@
+#!/bin/python3
+
+import sys
+
+n=input()
+s=input()
+k=int(input())
+k=k%26
+for i in s:
+    if(i.isalpha()):
+        if(i.isupper()):
+                if(ord(i)+k>ord('Z')):
+                    print(chr(ord('A')+(ord('Z')+ord(i)+k)%90-1),end="")
+                else:
+                    print(chr(ord(i) + k), end="")
+        else:
+               if(ord(i)+k>ord('z')):
+                   print(chr(ord('a') + (ord('z') + ord(i) + k) % 122 - 1), end="")
+
+               else:
+                   print(chr(ord(i) + k), end="")
+
+
+    else:
+        print(i,end="")
