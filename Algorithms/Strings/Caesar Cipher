@@ -2,7 +2,7 @@
 
 import sys
 
-n=input()
+n=int(input())
 s=input()
 k=int(input())
 k=k%26
