@@ -1,0 +1,25 @@
+#!/bin/python3
+
+import sys
+
+
+s=input()
+aa=[]
+cnt = 1
+ll=len(s)
+for i in range(ll):
+
+        if(i<ll-1 and s[i]==s[i+1]):
+            cnt+=1
+        else:
+            cnt=1
+        aa.append((ord(s[i]) - 96) * cnt)
+aa=set(aa)
+
+
+n=int(input())
+for i in range(n):
+    qq=int(input())
+    if(qq in aa):
+        print("Yes")
+    else:print("No")
