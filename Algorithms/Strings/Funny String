@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import sys
+
+n=int(input())
+for j in range(n):
+    s = input()
+    ll = len(s)
+
+    for i in range(1,len(s)):
+        if(abs(ord(s[i])-ord(s[i-1]))!= abs(ord(s[ll-i-1])-ord(s[ll-i]))):
+            print("Not Funny")
+            break
+
+    else:
+        print("Funny")
