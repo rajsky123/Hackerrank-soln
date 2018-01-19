@@ -1,0 +1,10 @@
+#!/bin/python3
+
+import sys
+
+from collections import Counter
+s=input()
+d=list(filter(lambda x:x%2!=0,Counter(s).values()))
+if(len(d)<=1):
+    print("YES")
+else:print("NO")
