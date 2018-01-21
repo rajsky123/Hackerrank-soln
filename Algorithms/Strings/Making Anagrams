@@ -1,0 +1,10 @@
+#!/bin/python3
+
+import sys
+
+from collections import Counter
+s=input()
+a=input()
+p=Counter(s) & Counter(a)
+p=Counter(s)-p + Counter(a)-p
+print(sum(p.values()))
