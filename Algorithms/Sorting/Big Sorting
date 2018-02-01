@@ -1,0 +1,11 @@
+#!/bin/python3
+
+import sys
+
+a=[]
+for i in range(int(input())):
+    a.append(input())
+
+a.sort(key=lambda x:(len(x),x))
+for j in a:
+    print(j)
