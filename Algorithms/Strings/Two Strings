@@ -1,0 +1,14 @@
+#!/bin/python3
+
+import sys
+
+for j in range(int(input())):
+    s1=set(input())
+    s2=set(input())
+    for i in s1:
+        if(i in s2):
+            print("YES")
+            break
+    else:
+        print("NO")
+
