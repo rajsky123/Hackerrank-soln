@@ -1,0 +1,15 @@
+#!/bin/python3
+
+import sys
+
+a,b,c=map(int,input().split())
+cnt=0
+for i in range(a,int(b)+1):
+    j = ""
+    ii=str(i)
+    for k in range(len(ii) - 1, -1, -1):
+        j += ii[k]
+    j=int(j)
+    if(abs(i-j)%c==0):
+        cnt+=1
+print(cnt)
