@@ -1,0 +1,11 @@
+#!/bin/python3
+
+import sys
+
+s=input()
+n=int(input())
+cnt=s.count("a")
+div=divmod(n,len(s))
+a=div[0]*cnt+s[:div[1]].count("a")
+print(a)
+
