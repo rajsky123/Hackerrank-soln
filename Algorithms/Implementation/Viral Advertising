@@ -1,0 +1,9 @@
+#!/bin/python3
+
+import sys
+sum1=2
+n=2
+for i in range(1,int(input())):
+    sum1+=n*3//2
+    n=n*3//2
+print(sum1)
