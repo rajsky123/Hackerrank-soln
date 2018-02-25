@@ -1,0 +1,18 @@
+#!/bin/python3
+
+import sys
+
+n,k=map(int,input().split())
+a=list(map(int,input().split()))
+e=100
+i=0
+for i in range(k,len(a),k):
+    if(a[i]==1):
+        e=e-1-2
+
+    else:
+        e=e-1
+
+if((i+k)%n==0):
+    e=e-1-2 if(a[0]==1) else e-1
+print(e)
