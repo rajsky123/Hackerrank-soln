@@ -1,0 +1,14 @@
+#!/bin/python3
+
+import sys
+
+n,t=map(int,input().split())
+a=list(map(int,input().split()))
+for k in range(t):
+    i,j=map(int,input().split())
+    if(j-i+1<=1000):
+        aa=min(a[i:j+1])
+    else:
+        aa=min(a[i:i+999])
+    print(aa)
+
