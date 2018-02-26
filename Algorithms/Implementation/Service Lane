@@ -9,6 +9,6 @@ for k in range(t):
     if(j-i+1<=1000):
         aa=min(a[i:j+1])
     else:
-        aa=min(a[i:i+999])
+        aa=min(a[i:i+1000])
     print(aa)
 
