@@ -1,0 +1,39 @@
+#!/bin/python3
+
+import sys
+
+n,k=map(int,input().split())
+a=list(map(int,input().split()))
+cnt=cnt1=0
+
+for i in a:
+    if(i>=k):
+        if(i%k!=0):
+            pg=1+i//k;
+        else:
+            pg=i//k;
+        ii = 1
+        for j in range(pg):
+            cnt += 1
+            jj = 0
+            while (ii <= i):
+
+                jj += 1
+
+                if (ii == cnt):
+                    cnt1 += 1
+
+                if (jj == k):
+                    ii += 1
+                    break
+                ii += 1
+
+    else:
+        cnt+=1
+        ii=1
+        while (ii <= i):
+
+            if (ii == cnt):
+                cnt1 += 1
+            ii += 1
+print(cnt1)
