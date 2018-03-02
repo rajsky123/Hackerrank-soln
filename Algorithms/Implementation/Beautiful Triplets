@@ -1,0 +1,11 @@
+#!/bin/python3
+
+import sys
+
+n,d=map(int,input().split())
+a=list(map(int,input().split()))
+cnt=0
+for i in a:
+    if((i+d) in a and (i+d+d)in a):
+        cnt+=1
+print(cnt)
