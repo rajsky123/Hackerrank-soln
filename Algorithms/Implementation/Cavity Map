@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import sys
+
+n=int(input())
+data=[]
+for i in range(n):
+    data.append(list(input()))
+print(''.join(data[0]))
+for i in range(1,n-1):
+    for j in range(1,n-1):
+        t = int(data[i][j])
+        if (data[i - 1][j]!='X' and data[i][j - 1]!='X' and data[i + 1][j]!='X' and data[i][j + 1]!='X' and
+                t > int(data[i - 1][j]) and t > int(data[i][j - 1])
+                and t > int(data[i + 1][j]) and t > int(data[i][j + 1])):
+            data[i][j]="X"
+    print(''.join(data[i]))
+if(n>1):
+    print(''.join(data[n-1]))
+
+
+
