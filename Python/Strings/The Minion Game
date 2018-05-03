@@ -1,0 +1,18 @@
+#!/bin/python3
+
+import sys
+
+def minion_game(s):
+    n=len(s)
+    stuart = kevin = 0
+    for i in range(n):
+        if s[i] in ('A', 'E', 'I', 'O', 'U'):
+            kevin += n - i
+        else:
+            stuart += n - i
+    if(stuart>kevin):
+        print("Stuart",stuart)
+    elif(stuart==kevin):
+        print("Draw")
+    else:
+        print("Kevin",kevin)
