@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import 
+
+def merge_the_tools(string,k):
+    a=[]
+    ii=jj=0
+    for i in range(len(string)//k):
+        a.append(string[ii:k+jj])
+        ii=ii+k
+        jj=jj+k
+
+    for j in a:
+        a1 = {}
+        ss=""
+        for strr in j:
+            if (a1.get(strr) != None):
+                a1[strr] = 2
+            else:
+                a1[strr] = 1
+                ss+=strr
+        print(ss)
