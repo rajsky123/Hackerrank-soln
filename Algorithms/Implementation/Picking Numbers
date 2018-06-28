@@ -1,0 +1,14 @@
+#!/bin/python3
+
+from collections import Counter
+n=input()
+a=list(map(int,input().split()))
+b=Counter(a)
+c=sorted(list(b.keys()))
+max1=b.get(c[0])
+for i in range(len(c)-1):
+    if(b.get(c[i])+b.get(c[i+1])>max1 and abs(c[i]-c[i+1])<=1):
+        max1=b.get(c[i])+b.get(c[i+1])
+    elif(b.get(c[i])>max1):
+        max1=b.get(c[i])
+print(max1)
