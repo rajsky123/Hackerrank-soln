@@ -1,0 +1,16 @@
+#!/bin/python3
+
+rd,rm,ry=map(int,input().split())
+ad,am,ay=map(int,input().split())
+fine=0
+if(ry<ay):
+    fine=0
+elif(ry>ay):
+    fine=10000
+elif(rm<am):
+    fine=0
+elif(rm>am):
+    fine=500*(rm-am)
+elif(rd>ad):
+    fine=15*(rd-ad)
+print(fine)
