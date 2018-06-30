@@ -1,0 +1,11 @@
+#!/bin/python3
+
+n=input()
+a=list(input())
+valley=level=0
+for i in a:
+    if(level==-1 and i=='U'):
+        valley+=1
+    if(i=='U'):level+=1
+    else:level-=1
+print(valley)
