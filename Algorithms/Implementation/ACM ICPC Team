@@ -1,0 +1,15 @@
+#!/bin/python3
+
+n,la=map(int,input().split())
+a=[]
+for i in range(n):
+    a.append(int(input(),2))
+maxx=cnt=tt=0
+for i in range(n-1):
+    for j in range(i+1,n):
+        cnt=len([k for k in bin(a[i]|a[j]) if k=='1'])
+        if(cnt>maxx):
+            maxx=cnt
+            tt=1
+        elif(maxx==cnt):
+            tt+=1
