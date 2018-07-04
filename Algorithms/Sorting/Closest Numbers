@@ -1,0 +1,12 @@
+#!/bin/python3
+
+n=int(input())
+a=list(map(int,input().split()))
+a.sort()
+minn=a[1]-a[0]
+for i in range(n-1):
+    if(a[i+1]-a[i]<=minn):
+        minn=a[i+1]-a[i]
+for i in range(n-1):
+    if(minn==a[i+1]-a[i]):
+        print(a[i],a[i+1],end=" ")
