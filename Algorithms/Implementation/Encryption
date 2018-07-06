@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import math
+s=input().replace(" ","")
+f=math.floor(math.sqrt(len(s)))
+c=math.ceil(math.sqrt(len(s)))
+a=[]
+ii=0
+jj=c
+if(f*c<len(s)):
+    f+=1
+for i in range(f):
+    a.append(s[ii:jj])
+    ii=jj
+    jj=jj+c
+j=0
+while(j<c):
+    for i in a:
+        if(j<len(i)):
+            print(i[j],end="")
+    print(end=" ")
+    j+=1
