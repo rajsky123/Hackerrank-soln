@@ -1,0 +1,18 @@
+#!/bin/python3
+
+a=int(input())
+b=int(input())
+cnt=0
+for n in range(a,b+1):
+    n=str(n)
+    nsize=len(n)
+    nsq=str(int(n)*int(n))
+    l=nsq[:len(nsq)//2]
+    r=nsq[len(nsq)//2:]
+    if(r==""):r=0
+    if(l==""):l=0
+    if(int(l)+int(r)==int(n)):
+        print(n,end=" ")
+        cnt=1
+if(cnt==0):
+    print("INVALID RANGE")
