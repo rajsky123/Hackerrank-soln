@@ -1,0 +1,11 @@
+#!/bin/python3
+
+n=input()
+a=list(map(int,input().split()))
+b=[0]*(max(a)+1)
+for i in a:
+    b[i]+=1
+for i in range(len(b)):
+    if(b[i]!=0):
+        for j in range(b[i]):
+            print(i,end=" ")
