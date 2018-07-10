@@ -1,0 +1,19 @@
+#!/bin/python3
+
+from collections import Counter
+s=[]
+n=input()
+a=list(map(int,input().split()))
+ca=dict(Counter(a))
+m=input()
+b=list(map(int,input().split()))
+cb=dict(Counter(b))
+if(max(cb.keys())-min(cb.keys())>100):
+    del cb[max(cb.keys())]
+    del cb[min(cb.keys())]
+for i in cb.keys():
+    if(ca.get(i)!=None and ca.get(i)<cb.get(i)):
+        s.append(i)
+s.sort()
+for i in s:
+    print(i,end=" ")
