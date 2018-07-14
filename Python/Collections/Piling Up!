@@ -1,0 +1,27 @@
+#!/bin/python3
+
+for j in range(int(input())):
+    n=int(input())
+    a=list(map(int,input().split()))
+    b=[]
+    if(a[0]>=a[n-1]):
+        b.append(a[0])
+        del a[0]
+    else:
+        b.append(a[n-1])
+        del a[n-1]
+    i=0
+    ii=len(a)-1
+    while(i<=len(a)):
+        if (len(b)== n):
+            print("Yes")
+            break
+        elif(a[i]>=a[ii] and a[i]<=b[len(b)-1]):
+            b.append(a[i])
+            i+=1
+        elif(a[ii]>=a[i] and a[ii]<=b[len(b)-1]):
+            b.append(a[ii])
+            ii-=1
+        else:
+            print("No")
+            break
