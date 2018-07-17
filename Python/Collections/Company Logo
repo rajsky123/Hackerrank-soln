@@ -1,0 +1,8 @@
+#!/bin/python3
+
+from collections import Counter
+n=Counter(input())
+c=sorted(n)
+c=sorted(c,key=lambda x:n[x],reverse=True)
+for i in range(3):
+    print(c[i],n[c[i]])
