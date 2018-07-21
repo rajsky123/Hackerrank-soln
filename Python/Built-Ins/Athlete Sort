@@ -1,0 +1,7 @@
+#!/bin/python3
+n,m = map(int,input().split())
+arr=[list(map(int,input().rstrip().split())) for _ in range(n)]
+k=int(input())
+arr.sort(key=lambda arr:arr[k])
+for i in arr:
+    print(" ".join(map(str,i)))
