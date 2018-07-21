@@ -1,0 +1,15 @@
+#!/bin/python3
+a=input()
+def myfun(ch):
+    t=ord(ch)
+    if(ch.islower()):
+        t+=100
+    elif(ch.isupper()):
+        t+=200
+    else:
+        if(int(ch)%2!=0):
+            t+=1000
+        else:
+            t+=2000
+    return t
+print("".join(sorted(a,key=myfun)))a=input()
